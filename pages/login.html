@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make My Home/ Login</title>
+    <link rel="stylesheet" href="/login.css" />
+    <!-- Bootstrap cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <div id="loginAlert" class="alert" role="alert"></div>
+      <form id="loginForm" action="/home/login" method="POST">
+        <input type="text" name="username" placeholder="Username" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+
+    <!-- Bootstrap js link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script>
+      const form = document.getElementById("loginForm"); // Assuming the form has the ID "loginForm"
+      const alertDiv = document.getElementById("loginAlert");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        const formData = new FormData(form); // Get form data
+        const username = formData.get("username");
+        const password = formData.get("password");
+
+        try {
+          const response = await fetch("/home/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+          });
+
+          const data = await response.json(); // Parse JSON response
+
+          if (response.ok) {
+            // Check if the response is successful (status code 200-299)
+            alertDiv.classList.remove("alert-danger");
+            alertDiv.classList.add("alert-success");
+            alertDiv.textContent = "Login successful. Redirecting...";
+            console.log("Login successful!");
+
+            function backToLogin() {
+              window.location.href = "/tenant-profile";
+            }
+          } else {
+            alertDiv.classList.remove("alert-success");
+            alertDiv.classList.add("alert-danger");
+            alertDiv.textContent = data.error;
+            console.log("Login failed!");
+          }
+        } catch (error) {
+          console.error("Error logging in:", error);
+        }
+      });
+    </script> -->
+
+    <script>
+      const form = document.getElementById("loginForm"); // Assuming the form has the ID "loginForm"
+      const alertDiv = document.getElementById("loginAlert");
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        const formData = new FormData(form); // Get form data
+        const username = formData.get("username");
+        const password = formData.get("password");
+
+        try {
+          const response = await fetch("/home/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+          });
+
+          const data = await response.json(); // Parse JSON response
+
+          if (response.ok) {
+            // Check if the response is successful (status code 200-299)
+            alertDiv.classList.remove("alert-danger", "alert-warning");
+            alertDiv.classList.add("alert-success");
+            alertDiv.textContent = "Login successful. Redirecting...";
+            console.log("Login successful!");
+
+            setTimeout(() => {
+              window.location.href = data.redirectUrl;
+            }, 1400); // Redirect after 3 seconds
+          } else {
+            if (data.alert) {
+              // Check if the server sent an alert message
+              alertDiv.classList.remove("alert-success");
+              if (data.alert.type === "danger") {
+                alertDiv.classList.add("alert-danger");
+              } else if (data.alert.type === "warning") {
+                alertDiv.classList.add("alert-warning");
+              }
+              alertDiv.textContent = data.alert.message;
+            } else {
+              alertDiv.classList.remove("alert-success");
+              alertDiv.classList.add("alert-danger");
+              alertDiv.textContent = data.error;
+            }
+            console.log("Login failed!");
+            if (data.error === "Username not found in the database") {
+              setTimeout(() => {
+                window.location.href = "/home/signup";
+              }, 3000); // Redirect to signup after 3 seconds
+            }
+          }
+        } catch (error) {
+          console.error("Error logging in:", error);
+        }
+      });
+    </script>
+  </body>
+</html>

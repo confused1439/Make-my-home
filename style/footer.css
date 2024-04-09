@@ -1,0 +1,50 @@
+footer {
+    background:#282834;
+    color: #b6b7b9;
+    padding:10% 0 5% 0;
+}
+footer .grid{
+    grid-template-columns: 7fr 2fr 3fr;
+}
+
+footer .container .box img{
+    width: 200px;
+    height: 50px;
+}
+
+footer p{
+    color: #b6b7b9;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+footer .icon i{
+    margin: 20px 15px 20px 0;
+    color: #b6b7b9;
+}
+footer h2{
+    color: #fff;
+    margin-bottom:10px;
+}
+
+footer li{
+    margin-bottom: 20px;
+}
+
+footer i{
+    color: #7fc142;
+    margin: 20px 0;
+    margin-right: 20x;
+}
+footer label{
+    margin: 20px 0;
+}
+
+.legal{
+    padding: 15px 0;
+    background: #282834;
+    color: #b6b7b9 ;
+
+border-top:1px solid rgba(255,255,255,0.5) ;
+}
+

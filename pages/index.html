@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Make My Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="book.css" />
+    <link rel="stylesheet" href="about_counter.css" />
+    <link rel="stylesheet" href="rooms.css" />
+    <link rel="stylesheet" href="services.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="content flex_space">
+        <div class="logo">
+          <img src="make my home.jpg" alt="" />
+        </div>
+        <div class="navlinks">
+          <ul id="menulist">
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#rooms">rooms</a></li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><i class="fa fa-search"></i></li>
+            <li>
+              <button class="primary-btn" onclick="navigateToLogin()">
+                BOOK NOW
+              </button>
+            </li>
+            <li></li>
+          </ul>
+          <span class="fa fa-bars" onclick="menutoggle()"></span>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      var menulist = document.getElementById("menulist");
+      menulist.style.maxHeight = "0px";
+
+      function menutoggle() {
+        if (menulist.style.maxHeight == "0px") {
+          menulist.style.maxHeight = "100vh";
+        } else {
+          menulist.style.maxHeight = "0px";
+        }
+      }
+    </script>
+
+    <section class="home" id="home">
+      <div class="content">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="2p3.jpg" alt="" />
+            <div class="text">
+              <h1>Find Your Home</h1>
+              <p>spend your time happily in a beautiful home.</p>
+              <div class="flex">
+                <button class="primary-btn">READ MORE</button>
+                <button class="secondary-btn">CONTACT US</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="2 p.jpg" alt="" />
+            <div class="text">
+              <h1>Find Your Home</h1>
+              <p>spend your time happily in a beautiful home.</p>
+              <div class="flex">
+                <button class="primary-btn">READ MORE</button>
+                <button class="secondary-btn">CONTACT US</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="2 p2.jpg" alt="" />
+            <div class="text">
+              <h1>Find Your Home</h1>
+              <p>spend your time happily in a beautiful home.</p>
+              <div class="flex">
+                <button class="primary-btn">READ MORE</button>
+                <button class="secondary-btn">CONTACT US</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        navText: [
+          "<i class='fa fa-chevron-left'></i>",
+          "<i class='fa fa-chevron-right'></i>",
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+    </script>
+
+    <section class="book">
+      <div class="container flex_space">
+        <div class="text">
+          <h1><span>Book</span> Your Rooms</h1>
+        </div>
+        <div class="form">
+          <form class="grid">
+            <input type="date" placeholder="Araival Date" />
+            <input type="date" placeholder="Departure Date" />
+            <input type="number" placeholder="Adult" />
+            <input type="number" placeholder="children" />
+            <input type="submit" value="CHECK AVAILABILITY" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="about top" id="about">
+      <div class="container flex">
+        <div class="left">
+          <div class="heading">
+            <h1>welcome</h1>
+            <h2>In Our Website</h2>
+          </div>
+          <p>
+            welcome to make my home website.In our website you can find the home
+            of your choice.There are many lists of houses in our website from
+            which you can contact any house owner you like.Apart from that you
+            can also check library, rickshaw station, food court, gym near your
+            home.Very useful website for Student becuase very useful for finding
+            and staying in a rental house.
+          </p>
+          <button class="primary-btn">About US</button>
+        </div>
+        <div class="right">
+          <img src="3p.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="counter top">
+      <div class="container grid">
+        <div class="box">
+          <h1>2500</h1>
+          <hr />
+          <span>Happy Customer</span>
+        </div>
+        <div class="box">
+          <h1>150</h1>
+          <hr />
+          <span>Expert Technicians</span>
+        </div>
+        <div class="box">
+          <h1>3550</h1>
+          <hr />
+          <span>Destop Required</span>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="rooms" id="rooms">
+      <div class="container top">
+        <div class="heading">
+          <h1>Expolre</h1>
+          <h2>Our Houses</h2>
+          <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt </p> -->
+        </div>
+
+        <div class="content mtop">
+          <div class="owl-carousel owl-carousel1 owl-theme">
+            <div class="items">
+              <div class="image">
+                <img src="1.jpg" style="height: 250px" alt="" />
+              </div>
+              <div class="text">
+                <h2>House</h2>
+                <!-- <div class="rate flex">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div> -->
+                <p>
+                  NOTE:-One months rate advance given when you live in House.
+                  Always keep the house clean.minimum 7 students have allow in
+                  house. stictkly notice all students do not allow drink and
+                  smoking in house,
+                </p>
+                <p>Address:-near char rasta modasa.dist:-arvalli</p>
+                <div class="button flex">
+                  <button class="primary-btn">book now></button>
+                  <h3>
+                    1250/-months<span><br />per person</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="1bhk2.jpeg" style="height: 250px" alt="" />
+              </div>
+              <div class="text">
+                <h2>1BHK FLAT</h2>
+
+                <p>
+                  NOTE:-One months rate advance given when you live in House.
+                  Always keep the house clean.minimum 3 students have allow in
+                  house. stictkly notice all students do not allow drink and
+                  smoking in house,
+                </p>
+                <p>
+                  Address:- infront of palate chokdi, hanuman society.A division
+                  10th floor
+                </p>
+
+                <div class="button flex">
+                  <button class="primary-btn">book now></button>
+                  <h3>
+                    1250/-month <span><br />Per Person</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="2 p.jpg" style="height: 250px" alt="" />
+              </div>
+              <div class="text">
+                <h2>2BHK FLATE</h2>
+
+                <p>
+                  NOTE:-two months rate advance given when you live in House.
+                  Always keep the house clean.minimum 6 students have allow in
+                  house. stictkly notice all students do not allow drink and
+                  smoking in house.
+                </p>
+                <p>Address:-near rampark infront of lalubhai soda shop.</p>
+                <div class="button flex">
+                  <button class="primary-btn">book now></button>
+                  <h3>
+                    7000/-month<span><br />All Students</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="3p.jpg" style="height: 250px" alt="" />
+              </div>
+              <div class="text">
+                <h2>3BHK FLAT</h2>
+
+                <p>
+                  NOTE:-3 months rate advance given when you live in House.
+                  Always keep the house clean.minimum 10 students have allow in
+                  house. stictkly notice all students do not allow drink and
+                  smoking in flat.
+                </p>
+                <p>Address:-infront of rampark, modasa</p>
+                <div class="button flex">
+                  <button class="primary-btn">book now></button>
+                  <h3>
+                    12000/-month <span><br />All person</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="3bhk.jpeg" style="height: 250px" alt="" />
+              </div>
+              <div class="text">
+                <h2>3BHK FLAT</h2>
+
+                <p>
+                  NOTE:-1 months rate advance given when you live in House.
+                  Always keep the house clean.minimum 12 students have allow in
+                  house. stictkly notice all students do not allow drink and
+                  smoking in flat,
+                </p>
+                <p>address:-umiya park behind hanuman mandir modasa 383315.</p>
+                <div class="button flex">
+                  <button class="primary-btn">book now></button>
+                  <h3>
+                    12500/-month <span><br />All Students</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="house.jpeg" style="height: 250px" alt="" />
+              </div>
+              <div class="text">
+                <h2>House</h2>
+
+                <p>
+                  NOTE:-3 months rate advance given when you live in House.
+                  Always keep the house clean.minimum 10 students have allow in
+                  house. stictkly notice all students do not allow drink and
+                  smoking in house,
+                </p>
+                <p>
+                  Address:-near soda bar pavancity 3 division 5th floor modasa.
+                </p>
+                <div class="button flex">
+                  <button class="primary-btn">book now></button>
+                  <h3>
+                    15000/-month <span><br />All Students</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="3p.jpg" style="height: 250px" alt="" />
+              </div>
+              <div class="text">
+                <h2>2BHK FLAT</h2>
+
+                <p>
+                  NOTE:-1 months rate advance given when you live in House.
+                  Always keep the house clean.minimum 5 students have allow in
+                  flat. stictkly notice all students do not allow drink and
+                  smoking in flat,
+                </p>
+                <p>
+                  Address:-near new bus station,ram society 3rd flor B division
+                  modasa
+                </p>
+                <div class="button flex">
+                  <button class="primary-btn">book now></button>
+                  <h3>
+                    1000/-month <span><br />per person</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="items">
+              <div class="image">
+                <img src="house2.jpeg" style="height: 250px" alt="" />
+              </div>
+              <div class="text">
+                <h2>HOUSE</h2>
+
+                <p>
+                  NOTE:-3 months rate advance given when you live in House.
+                  Always keep the house clean.minimum 15 students have allow in
+                  house. stictkly notice all students do not allow drink and
+                  smoking in house,
+                </p>
+                <p>Address:-near nursing college umiya park society modasa.</p>
+                <div class="button flex">
+                  <button class="primary-btn">book now></button>
+                  <h3>
+                    14000/-month <span><br />All Person</span>
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 40,
+        nav: true,
+        dots: false,
+        navText: [
+          "<i class='fa fa-chevron-left'></i>",
+          "<i class='fa fa-chevron-right'></i>",
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+            margin: 10,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+
+    <section class="services top" id="services">
+      <div class="container">
+        <div class="heading">
+          <h1>Services</h1>
+          <h2>Our services</h2>
+          <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p> -->
+        </div>
+
+        <div class="content flex_space">
+          <div class="left grid2">
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <h3>Delious Food</h3>
+              </div>
+            </div>
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-person-biking"></i>
+                <h3>Fitness</h3>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-car"></i>
+                <h3>Auto Stand</h3>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="text">
+                <i class="fa-solid fa-book"></i>
+                <h3>Library</h3>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <img src="food_friend2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container grid">
+        <div class="box">
+          <img src="make my home.jpg" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+            veniam ab necessitatibus? Corrupti perspiciatis harum repellat
+            tempora atque laudantium facere eveniet ea quo, omnis rem similique
+            ratione quasi beatae fugit rerum officiis dolore. Officiis
+            repudiandae vitae accusantium ullam, dolorum consequatur
+            reprehenderit delectus fugit, fuga rerum eligendi est dicta!
+            Numquam, distinctio.
+          </p>
+
+          <div class="icon">
+            <i class="fa fa-facebook-f"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-youtube"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2>links</h2>
+          <ul>
+            <li>Company History</li>
+            <li>About Us</li>
+            <li>Contact US</li>
+            <li>Services</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h2 id="contact">contact Us</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+            unde dolores dicta quos iure! Labore, inventore quas non quos totam
+            nihil necessitatibus ad repudiandae facere numquam expedita aperiam
+            eos odio, esse molestias architecto unde officia quod?
+            Exercitationem delectus perspiciatis quia!
+          </p>
+          <br />
+
+          <label
+            ><i class="fa fa-location-dot"></i>Office No.07,Near Char Rasta
+            Modasa, Arvali</label
+          ><br />
+
+          <label><i class="fa fa-phone"></i> 0000000000</label><br />
+
+          <label><i class="fa fa-envelope"></i>hardik@gmail.com</label>
+        </div>
+      </div>
+    </footer>
+
+    <div class="legal">
+      <p class="container">
+        Copyright (c) 2024 Copyright Holder All Rights Reserved.
+      </p>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/032d11eac3.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function navigateToLogin() {
+        window.location.href = "/home/login";
+      }
+    </script>
+  </body>
+</html>

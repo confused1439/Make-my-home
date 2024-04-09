@@ -1,0 +1,82 @@
+
+/* ...start rooms.... */
+
+.rooms{
+    position: relative;
+}
+.rooms .text{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-top: none;
+    padding: 30px;
+}
+
+/* .rooms i{
+    font-size: 12px;
+    color: #fbb234;
+    margin: 15px 0;
+    margin-right: 5px;
+} */
+
+.rooms .heading h1{
+    font-size: 100px;
+    font-weight: 500;
+    opacity: 0.1;
+    font-family: serif;
+    position: absolute;
+    top: -39px;
+    
+}
+
+.rooms .heading h2{
+    margin: 65px 50px;
+    font-size: 45px;
+    font-family: serif;
+    font-weight: 400;
+}
+
+.rooms p{
+    margin: 20px 0;
+    opacity: 0.7;
+}
+.rooms h3{
+    font-size: 30px;
+    line-height: 20px;
+    margin-left: 20px;
+    font-weight: 500;
+    color: #7fc142;
+}
+.rooms h3 span{
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+}
+/* start.....code for erro button in our room..... */
+/* .....code for erro button in our room..... */
+/* .....code for erro button in our room..... */
+
+.rooms .owl-nav .owl-prev,
+.rooms .owl-nav .owl-next {
+    position: absolute;
+    top: -20%;
+    height: 50px;
+    width: 50px;
+    background:#7fc142 !important;
+    color: #fff;
+}
+.rooms .owl-nav .owl-prev i,
+.rooms .owl-nav .owl-next i{
+    color: #fff;
+}
+
+.rooms .owl-nav .owl-prev{
+    left:90%;
+}
+.rooms .owl-nav .owl-next{
+    right:0;
+} 
+
+/* closed.....code for erro button in our room..... */
+/* .....code for erro button in our room..... */
+/* .....code for erro button in our room..... */
+
+/* .....our rooms code closed..... */
